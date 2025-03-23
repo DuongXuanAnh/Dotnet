@@ -148,3 +148,4 @@
 /Users/davidduong/Documents/Dot-Net/MySwaggerAPI/obj/Debug/net9.0/MySwaggerAPI.pdb
 /Users/davidduong/Documents/Dot-Net/MySwaggerAPI/obj/Debug/net9.0/MySwaggerAPI.genruntimeconfig.cache
 /Users/davidduong/Documents/Dot-Net/MySwaggerAPI/obj/Debug/net9.0/ref/MySwaggerAPI.dll
+/Users/davidduong/Documents/Dot-Net/MySwaggerAPI/obj/Debug/net9.0/MySwaggerAPI.sourcelink.json
