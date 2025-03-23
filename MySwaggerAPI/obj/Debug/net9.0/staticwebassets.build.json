@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "qUrxxfNbcs7GJzMiGVIaZRJuqC8JAwoB72nA90k9hEM=",
+  "Source": "MySwaggerAPI",
+  "BasePath": "_content/MySwaggerAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

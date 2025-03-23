@@ -1,0 +1,5 @@
+# Remove existing Pomelo reference
+dotnet remove package Pomelo.EntityFrameworkCore.MySql
+
+# Add correct version for .NET 9.0
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 9.0.0 
