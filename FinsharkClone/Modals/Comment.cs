@@ -1,3 +1,6 @@
+
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace FinsharkClone.Modals
 {
     [Table("Comments")]

@@ -1,0 +1,69 @@
+## .NET Core
+bin/
+obj/
+out/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build results
+*.dll
+*.exe
+*.app
+*.log
+*.cache
+*.msi
+*.ncb
+*.pdb
+*.mdb
+
+## OS generated files
+.DS_Store
+Thumbs.db
+
+## Visual Studio
+.vscode/
+.vs/
+*.dbmdl
+*.jfm
+
+## NuGet
+*.nupkg
+packages/
+*.snupkg
+
+# Ignore packages folder in case of packages.config
+**/packages/*
+
+## ASP.NET Core
+wwwroot/node_modules/
+wwwroot/lib/
+
+## Logs
+*.log
+
+## Rider
+.idea/
+
+## Environment settings
+.env
+.env.*
+
+## Test results
+TestResults/
+*.coverage
+*.coveragexml
+*.testresult
+
+## Publish
+publish/
+*.pubxml
+*.publishproj
+
+## Others
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.sln.ide
