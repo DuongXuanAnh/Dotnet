@@ -104,6 +104,25 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Microsoft.AspNetCore.OpenApi/9.0.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.17"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
         "type": "package",
         "compile": {
@@ -560,7 +579,7 @@
           }
         }
       },
-      "Microsoft.Extensions.ApiDescription.Server/6.0.3": {
+      "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.Extensions.ApiDescription.Server.props": {},
@@ -683,47 +702,6 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.FileProviders.Abstractions/9.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Primitives": "9.0.0"
-        },
-        "compile": {
-          "lib/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net8.0/_._": {}
-        }
-      },
-      "Microsoft.Extensions.FileProviders.Embedded/9.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.FileProviders.Abstractions": "9.0.0"
-        },
-        "compile": {
-          "lib/net9.0/Microsoft.Extensions.FileProviders.Embedded.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/Microsoft.Extensions.FileProviders.Embedded.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "build/netstandard2.0/_._": {}
-        },
-        "buildMultiTargeting": {
-          "buildMultiTargeting/_._": {}
-        }
-      },
       "Microsoft.Extensions.Logging/9.0.4": {
         "type": "package",
         "dependencies": {
@@ -818,6 +796,19 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.OpenApi/1.6.23": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Mono.TextTemplating/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -900,207 +891,6 @@
           }
         }
       },
-      "Namotion.Reflection/3.3.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/Namotion.Reflection.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Namotion.Reflection.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Newtonsoft.Json/13.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "NJsonSchema/11.2.0": {
-        "type": "package",
-        "dependencies": {
-          "NJsonSchema.Annotations": "11.2.0",
-          "Namotion.Reflection": "3.3.0",
-          "Newtonsoft.Json": "13.0.3"
-        },
-        "compile": {
-          "lib/net8.0/NJsonSchema.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/NJsonSchema.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "NJsonSchema.Annotations/11.2.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/NJsonSchema.Annotations.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/NJsonSchema.Annotations.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "NJsonSchema.NewtonsoftJson/11.2.0": {
-        "type": "package",
-        "dependencies": {
-          "NJsonSchema": "11.2.0",
-          "Newtonsoft.Json": "13.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/NJsonSchema.NewtonsoftJson.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/NJsonSchema.NewtonsoftJson.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "NJsonSchema.Yaml/11.2.0": {
-        "type": "package",
-        "dependencies": {
-          "NJsonSchema": "11.2.0",
-          "YamlDotNet": "16.3.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/NJsonSchema.Yaml.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/NJsonSchema.Yaml.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "NSwag.Annotations/14.3.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/NSwag.Annotations.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/NSwag.Annotations.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "NSwag.AspNetCore/14.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.ApiDescription.Server": "6.0.3",
-          "Microsoft.Extensions.FileProviders.Embedded": "9.0.0",
-          "NSwag.Annotations": "14.3.0",
-          "NSwag.Core": "14.3.0",
-          "NSwag.Core.Yaml": "14.3.0",
-          "NSwag.Generation": "14.3.0",
-          "NSwag.Generation.AspNetCore": "14.3.0"
-        },
-        "compile": {
-          "lib/net9.0/NSwag.AspNetCore.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/NSwag.AspNetCore.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "build/NSwag.AspNetCore.props": {},
-          "build/NSwag.AspNetCore.targets": {}
-        },
-        "buildMultiTargeting": {
-          "buildMultiTargeting/NSwag.AspNetCore.props": {},
-          "buildMultiTargeting/NSwag.AspNetCore.targets": {}
-        }
-      },
-      "NSwag.Core/14.3.0": {
-        "type": "package",
-        "dependencies": {
-          "NJsonSchema": "11.2.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/NSwag.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/NSwag.Core.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "NSwag.Core.Yaml/14.3.0": {
-        "type": "package",
-        "dependencies": {
-          "NJsonSchema.Yaml": "11.2.0",
-          "NSwag.Core": "14.3.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/NSwag.Core.Yaml.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/NSwag.Core.Yaml.dll": {}
-        }
-      },
-      "NSwag.Generation/14.3.0": {
-        "type": "package",
-        "dependencies": {
-          "NJsonSchema.NewtonsoftJson": "11.2.0",
-          "NSwag.Core": "14.3.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/NSwag.Generation.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/NSwag.Generation.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "NSwag.Generation.AspNetCore/14.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
-          "Microsoft.Extensions.Options": "9.0.0",
-          "NSwag.Generation": "14.3.0"
-        },
-        "compile": {
-          "lib/net9.0/NSwag.Generation.AspNetCore.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/NSwag.Generation.AspNetCore.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "Pomelo.EntityFrameworkCore.MySql/9.0.0-preview.3.efcore.9.0.0": {
         "type": "package",
         "dependencies": {
@@ -1117,6 +907,72 @@
             "related": ".xml"
           }
         }
+      },
+      "Swashbuckle.AspNetCore/8.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
+          "Swashbuckle.AspNetCore.Swagger": "8.1.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "8.1.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "8.1.1"
+        },
+        "build": {
+          "build/Swashbuckle.AspNetCore.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Swashbuckle.AspNetCore.props": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/8.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.23"
+        },
+        "compile": {
+          "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/8.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "8.1.1"
+        },
+        "compile": {
+          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/8.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "System.Buffers/4.5.1": {
         "type": "package",
@@ -1596,19 +1452,6 @@
           }
         }
       },
-      "YamlDotNet/16.3.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/YamlDotNet.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/YamlDotNet.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "ZstdSharp.Port/0.8.0": {
         "type": "package",
         "compile": {
@@ -1758,6 +1601,22 @@
         "lib/net9.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.xml",
         "microsoft.aspnetcore.diagnostics.entityframeworkcore.9.0.4.nupkg.sha512",
         "microsoft.aspnetcore.diagnostics.entityframeworkcore.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.OpenApi/9.0.4": {
+      "sha512": "GfZWPbZz1aAtEO3wGCkpeyRc0gzr/+VRHnUgY/YjqVPDlHbeKWCXw3IxKarQdo9myC2O1QBf652Mo50QqbXYRg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.openapi/9.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll",
+        "lib/net9.0/Microsoft.AspNetCore.OpenApi.xml",
+        "microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
@@ -2833,10 +2692,10 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
-    "Microsoft.Extensions.ApiDescription.Server/6.0.3": {
-      "sha512": "/FkS66n3wJaUR+Grkg+dMMIyrfmfkEybNoyOhdBMURxavPx6Q1Kn7NY5Ho41s975gpXA9Pnw7WRJbxwICLFgbw==",
+    "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
+      "sha512": "Ckb5EDBUNJdFWyajfXzUIMRkhf52fHZOQuuZg/oiu8y7zDCVwD0iHhew6MnThjHmevanpxL3f5ci2TtHQEN6bw==",
       "type": "package",
-      "path": "microsoft.extensions.apidescription.server/6.0.3",
+      "path": "microsoft.extensions.apidescription.server/6.0.5",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -2846,7 +2705,7 @@
         "build/Microsoft.Extensions.ApiDescription.Server.targets",
         "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props",
         "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets",
-        "microsoft.extensions.apidescription.server.6.0.3.nupkg.sha512",
+        "microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
         "microsoft.extensions.apidescription.server.nuspec",
         "tools/Newtonsoft.Json.dll",
         "tools/dotnet-getdocument.deps.json",
@@ -3236,57 +3095,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.FileProviders.Abstractions/9.0.0": {
-      "sha512": "uK439QzYR0q2emLVtYzwyK3x+T5bTY4yWsd/k/ZUS9LR6Sflp8MIdhGXW8kQCd86dQD4tLqvcbLkku8qHY263Q==",
-      "type": "package",
-      "path": "microsoft.extensions.fileproviders.abstractions/9.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/Microsoft.Extensions.FileProviders.Abstractions.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net8.0/_._",
-        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.FileProviders.Abstractions.targets",
-        "lib/net462/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "lib/net462/Microsoft.Extensions.FileProviders.Abstractions.xml",
-        "lib/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "lib/net8.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
-        "lib/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "lib/net9.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.xml",
-        "microsoft.extensions.fileproviders.abstractions.9.0.0.nupkg.sha512",
-        "microsoft.extensions.fileproviders.abstractions.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.FileProviders.Embedded/9.0.0": {
-      "sha512": "6Ev1goLIvggLF6uCs6oZvdr9JM+2b1Zj+4FLdBWNW5iw3tm2BymVIb0yMsjnQTBWL7YUmqVWH3u45hSqOfvuqg==",
-      "type": "package",
-      "path": "microsoft.extensions.fileproviders.embedded/9.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "build/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.props",
-        "build/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.targets",
-        "buildMultiTargeting/Microsoft.Extensions.FileProviders.Embedded.props",
-        "buildMultiTargeting/Microsoft.Extensions.FileProviders.Embedded.targets",
-        "lib/net462/Microsoft.Extensions.FileProviders.Embedded.dll",
-        "lib/net462/Microsoft.Extensions.FileProviders.Embedded.xml",
-        "lib/net9.0/Microsoft.Extensions.FileProviders.Embedded.dll",
-        "lib/net9.0/Microsoft.Extensions.FileProviders.Embedded.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.xml",
-        "microsoft.extensions.fileproviders.embedded.9.0.0.nupkg.sha512",
-        "microsoft.extensions.fileproviders.embedded.nuspec",
-        "tasks/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.Manifest.Task.dll"
-      ]
-    },
     "Microsoft.Extensions.Logging/9.0.4": {
       "sha512": "xW6QPYsqhbuWBO9/1oA43g/XPKbohJx+7G8FLQgQXIriYvY7s+gxr2wjQJfRoPO900dvvv2vVH7wZovG+M1m6w==",
       "type": "package",
@@ -3491,6 +3299,21 @@
         "runtime.json"
       ]
     },
+    "Microsoft.OpenApi/1.6.23": {
+      "sha512": "tZ1I0KXnn98CWuV8cpI247A17jaY+ILS9vvF7yhI0uPPEqF4P1d7BWL5Uwtel10w9NucllHB3nTkfYTAcHAh8g==",
+      "type": "package",
+      "path": "microsoft.openapi/1.6.23",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/netstandard2.0/Microsoft.OpenApi.dll",
+        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
+        "lib/netstandard2.0/Microsoft.OpenApi.xml",
+        "microsoft.openapi.1.6.23.nupkg.sha512",
+        "microsoft.openapi.nuspec"
+      ]
+    },
     "Mono.TextTemplating/3.0.0": {
       "sha512": "YqueG52R/Xej4VVbKuRIodjiAhV0HR/XVbLbNrJhCZnzjnSjgMJ/dCdV0akQQxavX6hp/LC6rqLGLcXeQYU7XA==",
       "type": "package",
@@ -3569,226 +3392,6 @@
         "mysqlconnector.nuspec"
       ]
     },
-    "Namotion.Reflection/3.3.0": {
-      "sha512": "8bIO+tMrKLv/5Hx1rnJgoz8MjGhpiWtSxadvhmGYm/WTeOLAnfR1ZKNz1FMmhQ0YmchNebn6ERVUOwBqV81GXQ==",
-      "type": "package",
-      "path": "namotion.reflection/3.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net462/Namotion.Reflection.dll",
-        "lib/net462/Namotion.Reflection.xml",
-        "lib/net8.0/Namotion.Reflection.dll",
-        "lib/net8.0/Namotion.Reflection.xml",
-        "lib/netstandard2.0/Namotion.Reflection.dll",
-        "lib/netstandard2.0/Namotion.Reflection.xml",
-        "namotion.reflection.3.3.0.nupkg.sha512",
-        "namotion.reflection.nuspec"
-      ]
-    },
-    "Newtonsoft.Json/13.0.3": {
-      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
-      "type": "package",
-      "path": "newtonsoft.json/13.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.md",
-        "README.md",
-        "lib/net20/Newtonsoft.Json.dll",
-        "lib/net20/Newtonsoft.Json.xml",
-        "lib/net35/Newtonsoft.Json.dll",
-        "lib/net35/Newtonsoft.Json.xml",
-        "lib/net40/Newtonsoft.Json.dll",
-        "lib/net40/Newtonsoft.Json.xml",
-        "lib/net45/Newtonsoft.Json.dll",
-        "lib/net45/Newtonsoft.Json.xml",
-        "lib/net6.0/Newtonsoft.Json.dll",
-        "lib/net6.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.0/Newtonsoft.Json.dll",
-        "lib/netstandard1.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.3/Newtonsoft.Json.dll",
-        "lib/netstandard1.3/Newtonsoft.Json.xml",
-        "lib/netstandard2.0/Newtonsoft.Json.dll",
-        "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "newtonsoft.json.13.0.3.nupkg.sha512",
-        "newtonsoft.json.nuspec",
-        "packageIcon.png"
-      ]
-    },
-    "NJsonSchema/11.2.0": {
-      "sha512": "ucPJuxr7d3sbOB4pewr50lDhjCloIFgyFV3OwyIGWGKiSL4H2FNjfT0kYwaIbPdhT8psPyphYpMYhzbdBZpudw==",
-      "type": "package",
-      "path": "njsonschema/11.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "NuGetIcon.png",
-        "lib/net462/NJsonSchema.dll",
-        "lib/net462/NJsonSchema.xml",
-        "lib/net8.0/NJsonSchema.dll",
-        "lib/net8.0/NJsonSchema.xml",
-        "lib/netstandard2.0/NJsonSchema.dll",
-        "lib/netstandard2.0/NJsonSchema.xml",
-        "njsonschema.11.2.0.nupkg.sha512",
-        "njsonschema.nuspec"
-      ]
-    },
-    "NJsonSchema.Annotations/11.2.0": {
-      "sha512": "YY7oavkCD+lbcFsjvDY0+h1/C+TgX5lYRQaracIq5zqF6FC35ddig+hARrta4Hk5/O3RbjH5I22/Qg25YNqmrA==",
-      "type": "package",
-      "path": "njsonschema.annotations/11.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "NuGetIcon.png",
-        "lib/net462/NJsonSchema.Annotations.dll",
-        "lib/net462/NJsonSchema.Annotations.xml",
-        "lib/netstandard2.0/NJsonSchema.Annotations.dll",
-        "lib/netstandard2.0/NJsonSchema.Annotations.xml",
-        "njsonschema.annotations.11.2.0.nupkg.sha512",
-        "njsonschema.annotations.nuspec"
-      ]
-    },
-    "NJsonSchema.NewtonsoftJson/11.2.0": {
-      "sha512": "5+40CksxHlx9CWQ0MnAkpJGA8MDFdlCR+18SNcg85X+UecT+EYfVVpiZX81mLYBsmbsWHXvPMm/Jipekm0XC8Q==",
-      "type": "package",
-      "path": "njsonschema.newtonsoftjson/11.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "NuGetIcon.png",
-        "lib/net462/NJsonSchema.NewtonsoftJson.dll",
-        "lib/net462/NJsonSchema.NewtonsoftJson.xml",
-        "lib/netstandard2.0/NJsonSchema.NewtonsoftJson.dll",
-        "lib/netstandard2.0/NJsonSchema.NewtonsoftJson.xml",
-        "njsonschema.newtonsoftjson.11.2.0.nupkg.sha512",
-        "njsonschema.newtonsoftjson.nuspec"
-      ]
-    },
-    "NJsonSchema.Yaml/11.2.0": {
-      "sha512": "s7K5l7evqCbAxG9fzNhxtTJMb/UOqWeLMkKWU7VU8myBv3zJEvrZE8LGEuXGY/rLwp2TRViIU1jhAeuOiZWdmA==",
-      "type": "package",
-      "path": "njsonschema.yaml/11.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "NuGetIcon.png",
-        "lib/net462/NJsonSchema.Yaml.dll",
-        "lib/net462/NJsonSchema.Yaml.xml",
-        "lib/netstandard2.0/NJsonSchema.Yaml.dll",
-        "lib/netstandard2.0/NJsonSchema.Yaml.xml",
-        "njsonschema.yaml.11.2.0.nupkg.sha512",
-        "njsonschema.yaml.nuspec"
-      ]
-    },
-    "NSwag.Annotations/14.3.0": {
-      "sha512": "y6xf+prDBQXoQu9EF2HsJdtAaVRBZCZsXMC1M2X2vy1P4urtSOiTgbWtT8+YqLOnyGyQ0cQUUh0a28B5Msniyg==",
-      "type": "package",
-      "path": "nswag.annotations/14.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "NuGetIcon.png",
-        "lib/net462/NSwag.Annotations.dll",
-        "lib/net462/NSwag.Annotations.xml",
-        "lib/netstandard2.0/NSwag.Annotations.dll",
-        "lib/netstandard2.0/NSwag.Annotations.xml",
-        "nswag.annotations.14.3.0.nupkg.sha512",
-        "nswag.annotations.nuspec"
-      ]
-    },
-    "NSwag.AspNetCore/14.3.0": {
-      "sha512": "wbxAMnyF4EPCCBktCwRLM3e2DPYclRlPqctK3TKCDL/mTI1T9IzlVmo93B0h4lb6bwU6CW12kunTFr8kdlLlTg==",
-      "type": "package",
-      "path": "nswag.aspnetcore/14.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "NuGetIcon.png",
-        "build/NSwag.AspNetCore.props",
-        "build/NSwag.AspNetCore.targets",
-        "buildMultiTargeting/NSwag.AspNetCore.props",
-        "buildMultiTargeting/NSwag.AspNetCore.targets",
-        "lib/net462/NSwag.AspNetCore.dll",
-        "lib/net462/NSwag.AspNetCore.xml",
-        "lib/net8.0/NSwag.AspNetCore.dll",
-        "lib/net8.0/NSwag.AspNetCore.xml",
-        "lib/net9.0/NSwag.AspNetCore.dll",
-        "lib/net9.0/NSwag.AspNetCore.xml",
-        "lib/netstandard2.0/NSwag.AspNetCore.dll",
-        "lib/netstandard2.0/NSwag.AspNetCore.xml",
-        "nswag.aspnetcore.14.3.0.nupkg.sha512",
-        "nswag.aspnetcore.nuspec"
-      ]
-    },
-    "NSwag.Core/14.3.0": {
-      "sha512": "j+wzDKITFuHcP9TbCGmhKkMCNn8plLqKftR8awcL47VRob+7GqxVJu7Ol2GIjNtE0Mk3Dc2V1ihaRKBhyzi6jA==",
-      "type": "package",
-      "path": "nswag.core/14.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "NuGetIcon.png",
-        "lib/net462/NSwag.Core.dll",
-        "lib/net462/NSwag.Core.xml",
-        "lib/netstandard2.0/NSwag.Core.dll",
-        "lib/netstandard2.0/NSwag.Core.xml",
-        "nswag.core.14.3.0.nupkg.sha512",
-        "nswag.core.nuspec"
-      ]
-    },
-    "NSwag.Core.Yaml/14.3.0": {
-      "sha512": "od7zHVgWUwf8vpiXtA+Xy3OQAfbbEGEaNCbiwrEIzXv7TK7OyFinNHVhMfBeDWqQxx0DBeJKpg9gjAz0etJxiA==",
-      "type": "package",
-      "path": "nswag.core.yaml/14.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "NuGetIcon.png",
-        "lib/net462/NSwag.Core.Yaml.dll",
-        "lib/netstandard2.0/NSwag.Core.Yaml.dll",
-        "nswag.core.yaml.14.3.0.nupkg.sha512",
-        "nswag.core.yaml.nuspec"
-      ]
-    },
-    "NSwag.Generation/14.3.0": {
-      "sha512": "j7CpTmowgvseYF19tkEHXbDmNtehZrcbzWODKvneFxkDn0dwWX8yihFHYMDD5yhtcb5xFhqW26+Ln+yHWz/3MA==",
-      "type": "package",
-      "path": "nswag.generation/14.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "NuGetIcon.png",
-        "lib/net462/NSwag.Generation.dll",
-        "lib/net462/NSwag.Generation.xml",
-        "lib/netstandard2.0/NSwag.Generation.dll",
-        "lib/netstandard2.0/NSwag.Generation.xml",
-        "nswag.generation.14.3.0.nupkg.sha512",
-        "nswag.generation.nuspec"
-      ]
-    },
-    "NSwag.Generation.AspNetCore/14.3.0": {
-      "sha512": "1+XqYkYD2pSEY1jW9/ddngX72sgCKKfd4z13SF8kd+dQqMky8WvWa5jd+AQSDE6LJws+jckyfzDnSMTbBkYweg==",
-      "type": "package",
-      "path": "nswag.generation.aspnetcore/14.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "NuGetIcon.png",
-        "lib/net462/NSwag.Generation.AspNetCore.dll",
-        "lib/net462/NSwag.Generation.AspNetCore.xml",
-        "lib/net8.0/NSwag.Generation.AspNetCore.dll",
-        "lib/net8.0/NSwag.Generation.AspNetCore.xml",
-        "lib/net9.0/NSwag.Generation.AspNetCore.dll",
-        "lib/net9.0/NSwag.Generation.AspNetCore.xml",
-        "lib/netstandard2.0/NSwag.Generation.AspNetCore.dll",
-        "lib/netstandard2.0/NSwag.Generation.AspNetCore.xml",
-        "nswag.generation.aspnetcore.14.3.0.nupkg.sha512",
-        "nswag.generation.aspnetcore.nuspec"
-      ]
-    },
     "Pomelo.EntityFrameworkCore.MySql/9.0.0-preview.3.efcore.9.0.0": {
       "sha512": "jNC/DLeRfFpgklIoSYkX3VoQy+ILY0wIZRtiYZrWknSv3u7BERM1XJcGDY9gt+RliPI07eUHE8utc315cH35hw==",
       "type": "package",
@@ -3802,6 +3405,83 @@
         "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.xml",
         "pomelo.entityframeworkcore.mysql.9.0.0-preview.3.efcore.9.0.0.nupkg.sha512",
         "pomelo.entityframeworkcore.mysql.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore/8.1.1": {
+      "sha512": "HJHexmU0PiYevgTLvKjYkxEtclF2w4O7iTd3Ef3p6KeT0kcYLpkFVgCw6glpGS57h8769anv8G+NFi9Kge+/yw==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore/8.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Swashbuckle.AspNetCore.props",
+        "buildMultiTargeting/Swashbuckle.AspNetCore.props",
+        "docs/package-readme.md",
+        "swashbuckle.aspnetcore.8.1.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.Swagger/8.1.1": {
+      "sha512": "h+8D5jQtnl6X4f2hJQwf0Khj0SnCQANzirCELjXJ6quJ4C1aNNCvJrAsQ+4fOKAMqJkvW48cKj79ftG+YoGcRg==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swagger/8.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/net9.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/net9.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "package-readme.md",
+        "swashbuckle.aspnetcore.swagger.8.1.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swagger.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/8.1.1": {
+      "sha512": "2EuPzXSNleOOzYvziERWRLnk1Oz9i0Z1PimaUFy1SasBqeV/rG+eMfwFAMtTaf4W6gvVOzRcUCNRHvpBIIzr+A==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggergen/8.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "package-readme.md",
+        "swashbuckle.aspnetcore.swaggergen.8.1.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggergen.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/8.1.1": {
+      "sha512": "GDLX/MpK4oa2nYC1N/zN2UidQTtVKLPF6gkdEmGb0RITEwpJG9Gu8olKqPYnKqVeFn44JZoCS0M2LGRKXP8B/A==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggerui/8.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
+        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "package-readme.md",
+        "swashbuckle.aspnetcore.swaggerui.8.1.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
     "System.Buffers/4.5.1": {
@@ -4971,29 +4651,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "YamlDotNet/16.3.0": {
-      "sha512": "SgMOdxbz8X65z8hraIs6hOEdnkH6hESTAIUa7viEngHOYaH+6q5XJmwr1+yb9vJpNQ19hCQY69xbFsLtXpobQA==",
-      "type": "package",
-      "path": "yamldotnet/16.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "images/yamldotnet.png",
-        "lib/net47/YamlDotNet.dll",
-        "lib/net47/YamlDotNet.xml",
-        "lib/net6.0/YamlDotNet.dll",
-        "lib/net6.0/YamlDotNet.xml",
-        "lib/net8.0/YamlDotNet.dll",
-        "lib/net8.0/YamlDotNet.xml",
-        "lib/netstandard2.0/YamlDotNet.dll",
-        "lib/netstandard2.0/YamlDotNet.xml",
-        "lib/netstandard2.1/YamlDotNet.dll",
-        "lib/netstandard2.1/YamlDotNet.xml",
-        "yamldotnet.16.3.0.nupkg.sha512",
-        "yamldotnet.nuspec"
-      ]
-    },
     "ZstdSharp.Port/0.8.0": {
       "sha512": "Z62eNBIu8E8YtbqlMy57tK3dV1+m2b9NhPeaYovB5exmLKvrGCqOhJTzrEUH5VyUWU6vwX3c1XHJGhW5HVs8dA==",
       "type": "package",
@@ -5017,11 +4674,12 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 9.0.4",
+      "Microsoft.AspNetCore.OpenApi >= 9.0.4",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.4",
       "Microsoft.EntityFrameworkCore.InMemory >= 9.0.4",
       "MySql.Data >= 9.2.0",
-      "NSwag.AspNetCore >= 14.3.0",
-      "Pomelo.EntityFrameworkCore.MySql >= 9.0.0-preview.3.efcore.9.0.0"
+      "Pomelo.EntityFrameworkCore.MySql >= 9.0.0-preview.3.efcore.9.0.0",
+      "Swashbuckle.AspNetCore >= 8.1.1"
     ]
   },
   "packageFolders": {
@@ -5071,6 +4729,10 @@
             "target": "Package",
             "version": "[9.0.4, )"
           },
+          "Microsoft.AspNetCore.OpenApi": {
+            "target": "Package",
+            "version": "[9.0.4, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "target": "Package",
             "version": "[9.0.4, )"
@@ -5083,13 +4745,13 @@
             "target": "Package",
             "version": "[9.2.0, )"
           },
-          "NSwag.AspNetCore": {
-            "target": "Package",
-            "version": "[14.3.0, )"
-          },
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
             "version": "[9.0.0-preview.3.efcore.9.0.0, )"
+          },
+          "Swashbuckle.AspNetCore": {
+            "target": "Package",
+            "version": "[8.1.1, )"
           }
         },
         "imports": [
