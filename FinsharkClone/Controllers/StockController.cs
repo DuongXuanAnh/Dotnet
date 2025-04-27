@@ -1,7 +1,10 @@
+
 using FinsharkClone.Data;
 using FinsharkClone.Modals;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using FinsharkClone.Dtos.Stock;
+using FinsharkClone.Mappers;
 
 namespace FinsharkClone.Controllers
 {
@@ -21,9 +24,10 @@ namespace FinsharkClone.Controllers
         {
         
             var stocks = await _context.Stocks.ToListAsync();
+            var stockDtos = stocks.Select(s => s.ToStockDto());
 
 
-            return Ok(stocks);
+            return Ok(stockDtos);
         }
 
          [HttpGet("{id:int}")]
@@ -36,7 +40,7 @@ namespace FinsharkClone.Controllers
                 return NotFound();
             }
 
-            return Ok(stock);
+            return Ok(stock.ToStockDto());
         }
 
         
