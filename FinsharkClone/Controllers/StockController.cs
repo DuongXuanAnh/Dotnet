@@ -44,18 +44,18 @@ namespace FinsharkClone.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] CreateStockRequestDto stockDto)
+        public async Task<IActionResult> Create([FromBody] CreateStockRequestDto stockDto)
         {
             var stockModel = stockDto.ToStockFromCreateDTO();
-            _context.Stocks.Add(stockModel);
-            _context.SaveChanges();
+            await _context.Stocks.AddAsync(stockModel);
+            await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetById), new { id = stockModel.Id }, stockModel.ToStockDto());
         }
 
         [HttpPut("{id:int}")]
-        public IActionResult Update([FromRoute] int id, [FromBody] UpdateStockRequestDto stockDto)
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateStockRequestDto stockDto)
         {
-           var stockModel = _context.Stocks.FirstOrDefault(s => s.Id == id);
+           var stockModel = await _context.Stocks.FirstOrDefaultAsync(s => s.Id == id);
 
            if (stockModel == null)
            {
@@ -69,15 +69,26 @@ namespace FinsharkClone.Controllers
            stockModel.Industry = stockDto.Industry;
            stockModel.MarketCap = stockDto.MarketCap;
 
-           _context.SaveChanges();
+           await _context.SaveChangesAsync();
 
            return Ok(stockModel.ToStockDto());
-           
-           
             
         }
 
-        
-        
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> Delete([FromRoute] int id)
+        {
+            var stockModel = await _context.Stocks.FirstOrDefaultAsync(s => s.Id == id);
+
+            if (stockModel == null)
+            {
+                return NotFound();
+            }
+
+            _context.Stocks.Remove(stockModel);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
     }
 }
