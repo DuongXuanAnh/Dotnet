@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using FinsharkClone.Data;
 using Microsoft.OpenApi.Models;
+using FinsharkClone.Interfaces;
+using FinsharkClone.Repository;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +17,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(10, 4, 11))));
 
+builder.Services.AddScoped<IStockRepository, StockRepository>();
 
 var app = builder.Build();
 
