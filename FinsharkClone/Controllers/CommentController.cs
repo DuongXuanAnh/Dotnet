@@ -21,5 +21,16 @@ namespace FinsharkClone.Controllers
             var commentDtos = comments.Select(c => c.ToCommentDto());
             return Ok(commentDtos);
         }
+
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetById([FromRoute] int id){
+            var comment = await _commentRepository.GetByIdAsync(id);
+
+            if(comment == null){
+                return NotFound();
+            }
+
+            return Ok(comment.ToCommentDto());
+        }
     }
 }
