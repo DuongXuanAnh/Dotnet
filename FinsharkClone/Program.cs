@@ -18,6 +18,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
         new MySqlServerVersion(new Version(10, 4, 11))));
 
 builder.Services.AddScoped<IStockRepository, StockRepository>();
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 
 var app = builder.Build();
 
