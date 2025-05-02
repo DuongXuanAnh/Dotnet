@@ -7,16 +7,41 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- JWT authentication for securing API endpoints with token-based security -->
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.4" />
+    
+    <!-- Developer-friendly error pages for Entity Framework Core related errors -->
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="9.0.4" />
+    
+    <!-- ASP.NET Core Identity using Entity Framework Core for user management -->
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.4" />
+    
+    <!-- Adds Newtonsoft.Json support for JSON serialization/deserialization in API controllers -->
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="9.0.4" />
+    
+    <!-- Enables generating OpenAPI specifications for API endpoints -->
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.4" />
+    
+    <!-- Design-time components for EF Core tools (like migrations) in .NET CLI -->
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.4" />
+    
+    <!-- In-memory database provider for testing EF Core applications -->
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.4" />
+    
+    <!-- Core identity services independent of any UI or entity framework -->
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="9.0.4" />
+    
+    <!-- ADO.NET driver for MySQL database connections -->
     <PackageReference Include="MySql.Data" Version="9.2.0" />
+    
+    <!-- High-performance JSON framework for .NET -->
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    
+    <!-- MySQL database provider for Entity Framework Core -->
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.3.efcore.9.0.0" />
+    
+    <!-- Generates Swagger/OpenAPI documentation with interactive UI for testing endpoints -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
-
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using FinsharkClone.Modals;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace FinsharkClone.Data
 {
-    public class ApplicationDBContext : DbContext
+    public class ApplicationDBContext : IdentityDbContext<AppUser>
     {
         public ApplicationDBContext(DbContextOptions options) : base(options){}
 
