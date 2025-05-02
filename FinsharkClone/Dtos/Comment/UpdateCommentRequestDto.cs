@@ -1,4 +1,6 @@
+using System.ComponentModel.DataAnnotations;
 namespace FinsharkClone.Dtos.Comment
+
 {
     public class UpdateCommentRequestDto
     {

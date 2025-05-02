@@ -1,5 +1,4 @@
 
-
 namespace FinsharkClone.Dtos.Comment
 {
     public class CommentDto
