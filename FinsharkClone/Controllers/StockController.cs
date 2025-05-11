@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using FinsharkClone.Dtos.Stock;
 using FinsharkClone.Mappers;
 using FinsharkClone.Interfaces;
-
+using Microsoft.AspNetCore.Authorization;
 namespace FinsharkClone.Controllers
 {
     [Route("api/stock")]
@@ -22,6 +22,7 @@ namespace FinsharkClone.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetAll()
         {
             if(!ModelState.IsValid){
