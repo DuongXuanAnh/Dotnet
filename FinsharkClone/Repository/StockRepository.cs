@@ -38,6 +38,9 @@ namespace FinsharkClone.Repository
                 }
             }
 
+            var skipNumber = (queryObject.PageNumber - 1) * queryObject.PageSize;
+            stocks = stocks.Skip(skipNumber).Take(queryObject.PageSize);
+
             return await stocks.ToListAsync();
         }
 
