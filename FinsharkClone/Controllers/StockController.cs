@@ -7,6 +7,7 @@ using FinsharkClone.Dtos.Stock;
 using FinsharkClone.Mappers;
 using FinsharkClone.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using FinsharkClone.Helpers;
 namespace FinsharkClone.Controllers
 {
     [Route("api/stock")]
@@ -22,14 +23,14 @@ namespace FinsharkClone.Controllers
         }
 
         [HttpGet]
-        [Authorize]
-        public async Task<IActionResult> GetAll()
+        // [Authorize]
+        public async Task<IActionResult> GetAll([FromQuery] QueryObject queryObject)
         {
             if(!ModelState.IsValid){
                 return BadRequest(ModelState);
             }
 
-            var stocks = await _stockRepository.GetAllAsync();
+            var stocks = await _stockRepository.GetAllAsync(queryObject);
             var stockDtos = stocks.Select(s => s.ToStockDto());
 
 
